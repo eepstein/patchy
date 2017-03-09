@@ -14,9 +14,9 @@ operator fun <V, V1 : V> (() -> Map<in String, V>).getValue(thisRef: Any?, prope
             return value
         }
         if(map.containsKey(key)){
-            throw KotlinNullPointerException("Property baking map returned null value for key '$key' for non nullable property: $property")
+            throw KotlinNullPointerException("Property backing map returned null value for key '$key' for non nullable property: $property")
         } else {
-            throw KotlinNullPointerException("Property baking map has no key '$key' for non nullable property $property")
+            throw KotlinNullPointerException("Property backing map has no key '$key' for non nullable property $property")
         }
     }
 }
